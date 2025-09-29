@@ -25,14 +25,14 @@ export class ClaudeAPIClient {
 
       if (response.status === 200) {
         this.lastUsage = response.data
-        console.log('✅ Claude usage retrieved successfully')
+        console.log('✅ Claude Stats retrieved successfully')
         return this.lastUsage
       }
 
       console.error('⚠️ Unexpected status:', response.status)
       return this.lastUsage
     } catch (error) {
-      console.error('❌ Error getting Claude usage')
+      console.error('❌ Error getting Claude Stats')
       if (axios.isAxiosError(error)) {
         console.error('Status:', error.response?.status)
         console.error('Error:', error.response?.data?.error?.message)

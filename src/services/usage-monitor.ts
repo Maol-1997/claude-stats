@@ -72,13 +72,15 @@ function checkUsageWarnings(usage: ClaudeUsage) {
 
   if (usage.seven_day_opus && usage.seven_day_opus.utilization > 90) {
     warnings.push(
-      `7-day Opus limit is ${usage.seven_day_opus.utilization.toFixed(1)}% used`,
+      `7-day Opus limit is ${usage.seven_day_opus.utilization.toFixed(
+        1,
+      )}% used`,
     )
   }
 
   if (warnings.length > 0) {
     vscode.window.showWarningMessage(
-      `Claude Usage Warning: ${warnings.join(', ')}`,
+      `Claude Stats Warning: ${warnings.join(', ')}`,
     )
   }
 }

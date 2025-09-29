@@ -12,7 +12,7 @@ import { registerCommands } from './commands'
 let updateInterval: NodeJS.Timeout | undefined
 
 export function activate(context: vscode.ExtensionContext) {
-  console.log('Claude Usage Monitor activated')
+  console.log('Claude Stats Monitor activated')
 
   // Create status bar item
   const statusBarItem = createStatusBarItem()

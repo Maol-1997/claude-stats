@@ -21,7 +21,7 @@ export function createStatusBarItem(): vscode.StatusBarItem {
   )
 
   statusBarItem.text = '$(claude-icon) $(sync~spin)'
-  statusBarItem.tooltip = 'Initializing Claude Usage Monitor...'
+  statusBarItem.tooltip = 'Initializing Claude Stats Monitor...'
   statusBarItem.command = 'claude-usage.noop'
   statusBarItem.show()
 

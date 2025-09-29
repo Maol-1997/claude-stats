@@ -33,7 +33,7 @@
     "commands": [
       {
         "command": "claude-stats.refresh",
-        "title": "Refresh Claude Usage"
+        "title": "Refresh Claude Stats"
       },
       {
         "command": "claude-stats.login",

@@ -17,7 +17,7 @@ export function createMainTooltip(
 
   // Header section with centered title and icon
   tooltip.appendMarkdown('<div align="center">\n\n')
-  tooltip.appendMarkdown(`## ⚡ Claude Usage Monitor\n\n`)
+  tooltip.appendMarkdown(`## ⚡ Claude Stats Monitor\n\n`)
   tooltip.appendMarkdown('</div>\n\n')
 
   // Account info section
@@ -198,14 +198,18 @@ export function createAuthErrorTooltip(error: any): vscode.MarkdownString {
   tooltip.appendMarkdown(`> 🔴 **${error}**\n\n`)
 
   tooltip.appendMarkdown(`### 🔧 Troubleshooting Steps\n\n`)
-  tooltip.appendMarkdown(`✓ Check if Claude Code credentials are in Keychain\n\n`)
+  tooltip.appendMarkdown(
+    `✓ Check if Claude Code credentials are in Keychain\n\n`,
+  )
   tooltip.appendMarkdown(`✓ Try logging in to Claude Code again\n\n`)
   tooltip.appendMarkdown(`✓ Reload VS Code window\n\n`)
 
   tooltip.appendMarkdown(`---\n\n`)
 
   tooltip.appendMarkdown('<div align="center">\n\n')
-  tooltip.appendMarkdown(`🔄 [Click to Retry](command:claude-usage.refresh)\n\n`)
+  tooltip.appendMarkdown(
+    `🔄 [Click to Retry](command:claude-usage.refresh)\n\n`,
+  )
   tooltip.appendMarkdown('</div>')
 
   return tooltip
@@ -221,7 +225,7 @@ export function createUpdatingTooltip(): vscode.MarkdownString {
   tooltip.supportHtml = true
 
   tooltip.appendMarkdown('<div align="center">\n\n')
-  tooltip.appendMarkdown(`## ⚡ Claude Usage Monitor\n\n`)
+  tooltip.appendMarkdown(`## ⚡ Claude Stats Monitor\n\n`)
   tooltip.appendMarkdown(`### $(sync~spin) Updating...\n\n`)
   tooltip.appendMarkdown(`Fetching latest usage from Claude API...\n\n`)
   tooltip.appendMarkdown('</div>')
@@ -254,7 +258,9 @@ export function createFetchErrorTooltip(): vscode.MarkdownString {
   tooltip.appendMarkdown(`---\n\n`)
 
   tooltip.appendMarkdown('<div align="center">\n\n')
-  tooltip.appendMarkdown(`🔄 [Click to Retry](command:claude-usage.refresh)\n\n`)
+  tooltip.appendMarkdown(
+    `🔄 [Click to Retry](command:claude-usage.refresh)\n\n`,
+  )
   tooltip.appendMarkdown('</div>')
 
   return tooltip
@@ -278,7 +284,9 @@ export function createUpdateErrorTooltip(error: any): vscode.MarkdownString {
   tooltip.appendMarkdown(`---\n\n`)
 
   tooltip.appendMarkdown('<div align="center">\n\n')
-  tooltip.appendMarkdown(`🔄 [Click to Retry](command:claude-usage.refresh)\n\n`)
+  tooltip.appendMarkdown(
+    `🔄 [Click to Retry](command:claude-usage.refresh)\n\n`,
+  )
   tooltip.appendMarkdown('</div>')
 
   return tooltip
